@@ -1,7 +1,4 @@
-import {config} from "dotenv";
 import sql from "./config/db.js";
-
-config(); // Загружаем переменные окружения из .env
 
 const accommodations = [
   // --- КВАРТИРЫ ---
@@ -89,8 +86,38 @@ const accommodations = [
 
 async function seed() {
   console.log("🌱 Начинаем очистку и заполнение базы данных...");
+  let exitCode = 0;
 
   try {
+    await sql`
+      CREATE TABLE IF NOT EXISTS accommodations (
+        id BIGSERIAL PRIMARY KEY,
+        title TEXT NOT NULL,
+        description TEXT NOT NULL,
+        type TEXT NOT NULL,
+        category TEXT NOT NULL,
+        location TEXT NOT NULL,
+        latitude DOUBLE PRECISION NOT NULL,
+        longitude DOUBLE PRECISION NOT NULL,
+        price NUMERIC(10, 2) NOT NULL,
+        rate NUMERIC(3, 2) NOT NULL,
+        image_url TEXT NOT NULL,
+        max_guests INTEGER NOT NULL,
+        created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+      )
+    `;
+
+    await sql`
+      CREATE TABLE IF NOT EXISTS bookings (
+        id BIGSERIAL PRIMARY KEY,
+        accommodation_id BIGINT NOT NULL REFERENCES accommodations(id) ON DELETE CASCADE,
+        status TEXT NOT NULL DEFAULT 'pending',
+        check_in DATE NOT NULL,
+        check_out DATE NOT NULL,
+        created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+      )
+    `;
+
     // 1. Очищаем таблицу перед новым заполнением
     await sql`TRUNCATE TABLE accommodations RESTART IDENTITY CASCADE`;
 
@@ -109,9 +136,10 @@ async function seed() {
 
     console.log("✅ База данных успешно заполнена тестовыми данными!");
   } catch (error) {
+    exitCode = 1;
     console.error("❌ Ошибка при заполнении базы:", error);
   } finally {
-    process.exit(0);
+    process.exit(exitCode);
   }
 }
 
