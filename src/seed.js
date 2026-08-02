@@ -14,7 +14,10 @@ const accommodations = [
     price: 180,
     rate: 4.95,
     image_url: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
-    max_guests: 4
+    max_guests: 4,
+    amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
+    selfCheckIn: true,
+    bathroomsCount: 2,
   },
 
 
@@ -30,7 +33,10 @@ const accommodations = [
     price: 130,
     rate: 5.00,
     image_url: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
-    max_guests: 3
+    max_guests: 3,
+    amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
+    selfCheckIn: true,
+    bathroomsCount: 2,
   },
    {
     title: "Современные апартаменты у Морского бульвара",
@@ -44,7 +50,10 @@ const accommodations = [
     price: 145,
     rate: 4.92,
     image_url: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
-    max_guests: 4
+    max_guests: 4,
+    amenities: ['Wi-Fi', 'Кондиционер',  'Бесплатная парковка', 'Кухня'],
+    selfCheckIn: true,
+    bathroomsCount: 2,
   },
 
   {
@@ -59,7 +68,10 @@ const accommodations = [
     price: 115,
     rate: 4.89,
     image_url: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800",
-    max_guests: 3
+    max_guests: 3,
+    amenities: ['Wi-Fi', 'Кондиционер',  'Бесплатная парковка', 'Кухня'],
+    selfCheckIn: true,
+    bathroomsCount: 2,
   },
 
   {
@@ -74,7 +86,10 @@ const accommodations = [
     price: 220,
     rate: 4.97,
     image_url: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800",
-    max_guests: 5
+    max_guests: 5,
+    amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
+    selfCheckIn: true,
+    bathroomsCount: 2,
   },
 
   {
@@ -89,7 +104,10 @@ const accommodations = [
     price: 125,
     rate: 4.84,
     image_url: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=800",
-    max_guests: 3
+    max_guests: 3,
+    amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
+    selfCheckIn: true,
+    bathroomsCount: 2,
   },
 
   {
@@ -104,7 +122,10 @@ const accommodations = [
     price: 180,
     rate: 4.91,
     image_url: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800",
-    max_guests: 6
+    max_guests: 6,
+    amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
+    selfCheckIn: true,
+    bathroomsCount: 2,
   },
 
   {
@@ -119,7 +140,10 @@ const accommodations = [
     price: 105,
     rate: 4.78,
     image_url: "https://images.unsplash.com/photo-1560185008-b033106af5c3?q=80&w=800",
-    max_guests: 2
+    max_guests: 2,
+    amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Джакузи', 'Бесплатная парковка', 'Кухня'],
+    selfCheckIn: true,
+    bathroomsCount: 2,
   },
 
   {
@@ -134,7 +158,10 @@ const accommodations = [
     price: 260,
     rate: 4.95,
     image_url: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=800",
-    max_guests: 4
+    max_guests: 4,
+    amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
+    selfCheckIn: true,
+    bathroomsCount: 2,
   },
 
   {
@@ -149,7 +176,10 @@ const accommodations = [
     price: 150,
     rate: 4.86,
     image_url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800",
-    max_guests: 3
+    max_guests: 3,
+    amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Джакузи', 'Бесплатная парковка', 'Кухня'],
+    selfCheckIn: true,
+    bathroomsCount: 2
   },
   // --- ОТЕЛИ ---
   {
@@ -164,7 +194,10 @@ const accommodations = [
     price: 450,
     rate: 4.98,
     image_url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800",
-    max_guests: 2
+    max_guests: 2,
+    amenities: ['Wi-Fi', 'Кондиционер',  'Джакузи', 'Стиральная машина', 'Бесплатная парковка', 'Кухня'],
+    selfCheckIn: true,
+    bathroomsCount: 2,
   },
    {
     title: "Fairmont Baku Flame Towers",
@@ -178,7 +211,10 @@ const accommodations = [
     price: 320,
     rate: 4.85,
     image_url: "https://images.unsplash.com/photo-1549294413-26f195200c16?q=80&w=800",
-    max_guests: 3
+    max_guests: 3,
+    amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
+    selfCheckIn: true,
+    bathroomsCount: 2,
   },
 
   {
@@ -193,7 +229,10 @@ const accommodations = [
     price: 280,
     rate: 4.91,
     image_url: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=800",
-    max_guests: 3
+    max_guests: 3,
+    amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Стиральная машина', 'Бесплатная парковка', 'Кухня'],
+    selfCheckIn: true,
+    bathroomsCount: 2,
   },
 
   {
@@ -208,7 +247,10 @@ const accommodations = [
     price: 165,
     rate: 4.87,
     image_url: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=800",
-    max_guests: 2
+    max_guests: 2,
+    amenities: ['Wi-Fi', 'Кондиционер', 'Бесплатная парковка', 'Кухня'],
+    selfCheckIn: true,
+    bathroomsCount: 2,
   },
 
   {
@@ -223,7 +265,10 @@ const accommodations = [
     price: 145,
     rate: 4.79,
     image_url: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=800",
-    max_guests: 2
+    max_guests: 2,
+    amenities: ['Wi-Fi', 'Кондиционер', 'Стиральная машина', 'Телевизор',],
+    selfCheckIn: true,
+    bathroomsCount: 2,
   },
 
   {
@@ -238,7 +283,10 @@ const accommodations = [
     price: 190,
     rate: 4.72,
     image_url: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=800",
-    max_guests: 4
+    max_guests: 4,
+    amenities: ['Wi-Fi', 'Кондиционер',  'Бесплатная парковка', 'Кухня'],
+    selfCheckIn: true,
+    bathroomsCount: 2,
   },
 
   {
@@ -253,7 +301,10 @@ const accommodations = [
     price: 95,
     rate: 4.63,
     image_url: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=800",
-    max_guests: 2
+    max_guests: 2,
+    amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
+    selfCheckIn: true,
+    bathroomsCount: 2,
   },
    {
     title: "Sea Breeze Resort",
@@ -267,7 +318,10 @@ const accommodations = [
     price: 240,
     rate: 4.88,
     image_url: "https://images.unsplash.com/photo-1602002418082-a4443e081dd1?q=80&w=800",
-    max_guests: 4
+    max_guests: 4,
+    amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
+    selfCheckIn: true,
+    bathroomsCount: 2,
   },
 
   {
@@ -282,7 +336,10 @@ const accommodations = [
     price: 130,
     rate: 4.68,
     image_url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800",
-    max_guests: 3
+    max_guests: 3,
+    amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
+    selfCheckIn: true,
+    bathroomsCount: 2,
   },
   {
     title: "JW Marriott Absheron Baku",
@@ -296,7 +353,10 @@ const accommodations = [
     price: 320,
     rate: 4.91,
     image_url: "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=800",
-    max_guests: 2
+    max_guests: 2,
+    amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
+    selfCheckIn: true,
+    bathroomsCount: 2,
   },
   {
     title: "Boutique Hotel Old City",
@@ -310,7 +370,10 @@ const accommodations = [
     price: 110,
     rate: 4.75,
     image_url: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800",
-    max_guests: 2
+    max_guests: 2,
+    amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
+    selfCheckIn: true,
+    bathroomsCount: 2,
   }
 ];
 
@@ -319,53 +382,44 @@ async function seed() {
   let exitCode = 0;
 
   try {
-    await sql`
-      CREATE TABLE IF NOT EXISTS accommodations (
-        id BIGSERIAL PRIMARY KEY,
-        title TEXT NOT NULL,
-        description TEXT NOT NULL,
-        type TEXT NOT NULL,
-        category TEXT NOT NULL,
-        city TEXT NOT NULL DEFAULT 'Баку',
-        location TEXT NOT NULL,
-        latitude DOUBLE PRECISION NOT NULL,
-        longitude DOUBLE PRECISION NOT NULL,
-        price NUMERIC(10, 2) NOT NULL,
-        rate NUMERIC(3, 2) NOT NULL,
-        image_url TEXT NOT NULL,
-        max_guests INTEGER NOT NULL,
-        created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-      )
-    `;
-
-    await sql`
-      CREATE TABLE IF NOT EXISTS bookings (
-        id BIGSERIAL PRIMARY KEY,
-        accommodation_id BIGINT NOT NULL REFERENCES accommodations(id) ON DELETE CASCADE,
-        status TEXT NOT NULL DEFAULT 'pending',
-        check_in DATE NOT NULL,
-        check_out DATE NOT NULL,
-        created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-      )
-    `;
-
-    await sql`
-      ALTER TABLE accommodations 
-      ADD COLUMN IF NOT EXISTS city TEXT NOT NULL DEFAULT 'Баку';
-    `;
-
     // 1. Очищаем таблицу перед новым заполнением
     await sql`TRUNCATE TABLE accommodations RESTART IDENTITY CASCADE`;
 
-    // 2. Вставляем массив данных в базу одним массовым запросом
+    // 2. Вставляем массив данных в базу
     for (const item of accommodations) {
       await sql`
         INSERT INTO accommodations (
-          title, description, type, category,  location, city,
-          latitude, longitude, price, rate, image_url, max_guests
+          title, 
+          description, 
+          type, 
+          category, 
+          city, 
+          location,
+          latitude, 
+          longitude, 
+          price, 
+          rate, 
+          image_url, 
+          max_guests,
+          amenities,
+          self_check_in,
+          bathrooms_count
         ) VALUES (
-          ${item.title}, ${item.description}, ${item.type}, ${item.category}, ${item.city || 'Баку'}, ${item.location},
-          ${item.latitude}, ${item.longitude}, ${item.price}, ${item.rate}, ${item.image_url}, ${item.max_guests}
+          ${item.title}, 
+          ${item.description}, 
+          ${item.type}, 
+          ${item.category}, 
+          ${item.city || 'Баку'}, 
+          ${item.location},
+          ${item.latitude}, 
+          ${item.longitude}, 
+          ${item.price}, 
+          ${item.rate}, 
+          ${item.image_url}, 
+          ${item.max_guests},
+          ${item.amenities || []},
+          ${item.selfCheckIn || false},
+          ${item.bathroomsCount || 1}
         )
       `;
     }
@@ -375,6 +429,7 @@ async function seed() {
     exitCode = 1;
     console.error("❌ Ошибка при заполнении базы:", error);
   } finally {
+    await sql.end({ timeout: 5 });
     process.exit(exitCode);
   }
 }

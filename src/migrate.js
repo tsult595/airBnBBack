@@ -1,7 +1,7 @@
 import sql from "./config/db.js";
 
 async function migratePush() {
-  console.log("🛠️  Applying database schema...");
+  console.log("🛠️ Applying database schema...");
 
   try {
     await sql`
@@ -19,13 +19,20 @@ async function migratePush() {
         rate NUMERIC(3, 2) NOT NULL,
         image_url TEXT NOT NULL,
         max_guests INTEGER NOT NULL,
+        amenities TEXT[] DEFAULT '{}',
+        self_check_in BOOLEAN DEFAULT FALSE,
+        bathrooms_count INT DEFAULT 1,
         created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
       )
     `;
 
+    // Безопасное добавление полей, если таблица уже существовала раньше
     await sql`
       ALTER TABLE accommodations 
-      ADD COLUMN IF NOT EXISTS city TEXT NOT NULL DEFAULT 'Баку';
+      ADD COLUMN IF NOT EXISTS city TEXT NOT NULL DEFAULT 'Баку',
+      ADD COLUMN IF NOT EXISTS amenities TEXT[] DEFAULT '{}',
+      ADD COLUMN IF NOT EXISTS self_check_in BOOLEAN DEFAULT FALSE,
+      ADD COLUMN IF NOT EXISTS bathrooms_count INT DEFAULT 1;
     `;
 
     await sql`
@@ -38,8 +45,6 @@ async function migratePush() {
         created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
       )
     `;
-
-    
 
     console.log("✅ Database schema is up to date.");
   } catch (error) {

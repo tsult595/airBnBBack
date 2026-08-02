@@ -9,6 +9,9 @@ export const getAccommodationsSchema = {
     guests: t.Optional(t.String()),
     checkIn: t.Optional(t.String()),
     checkOut: t.Optional(t.String()),
+    selfCheckIn: t.Optional(t.String()),     
+    moreThanOneBath: t.Optional(t.String()),
+    amenities: t.Optional(t.String()),
   }),
 };
 
