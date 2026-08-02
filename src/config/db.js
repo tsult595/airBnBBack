@@ -1,12 +1,17 @@
-import {config} from "dotenv";
 import postgres from 'postgres';
 
-config(); // Загружаем переменные окружения из .env
+// В Bun переменные из .env подгружаются автоматически в process.env и Bun.env
+const connectionString = process.env.DATABASE_URL || Bun.env.DATABASE_URL;
 
+if (!connectionString) {
+  console.error("❌ ОШИБКА: DATABASE_URL не найден в файле .env!");
+} else {
+  console.log("🔌 Подключаемся к базе данных...");
+}
 
-console.log(process.env.DATABASE_URL);
-
-// Заменили localhost на 127.0.0.1
-const sql = postgres(Bun.env.DATABASE_URL || "postgres://postgres:root@127.0.0.1:5432/airbnb_db");
+// Передаем SSL-настройки для облачной базы Neon
+const sql = postgres(connectionString, {
+  ssl: 'require', // Обязательно для Neon DB!
+});
 
 export default sql;

@@ -4,9 +4,38 @@ import { cors } from "@elysiajs/cors";
 import { accommodationRoutes } from "./routes/accommodation.routes.js";
 
 dotenv.config();
+
+const allowedOrigin = "http://localhost:3000";
+
+const applyCorsHeaders = ({ set }) => {
+  set.headers["access-control-allow-origin"] = allowedOrigin;
+  set.headers["access-control-allow-credentials"] = "true";
+  set.headers.vary = "Origin";
+};
+
 const app = new Elysia()
-  .use(cors())
-  .use(accommodationRoutes) // Подключаем роуты
+  // 🔥 Глобальный CORS для всех роутов и Preflight-запросов (OPTIONS)
+  .use(
+    cors({
+      origin: allowedOrigin,
+      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+      allowedHeaders: ["Content-Type", "Authorization"],
+      credentials: true,
+    })
+  )
+  .headers({
+    "access-control-allow-origin": allowedOrigin,
+    "access-control-allow-credentials": "true",
+    vary: "Origin",
+  })
+  .onAfterHandle(applyCorsHeaders)
+  // Выводим все ошибки в консоль терминала бэкенда, чтобы видеть, если падаем
+  .onError(({ code, error, set }) => {
+    console.error("❌ Backend Error:", code, error);
+    applyCorsHeaders({ set });
+    return { error: error.message || "Internal Server Error" };
+  })
+  .use(accommodationRoutes)
   .listen(5000);
 
 console.log(`🚀 Elysia Server running on http://${app.server?.hostname}:${app.server?.port}`);

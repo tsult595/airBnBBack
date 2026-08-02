@@ -18,19 +18,8 @@ const accommodations = [
     image_url: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
     max_guests: 4
   },
-  {
-    title: "Современная студия возле Ичери Шехер",
-    description: "Уютные апартаменты в 5 минутах ходьбы от Старого города. Отличный выбор для пар.",
-    type: "apartment",
-    category: "homes",
-    location: "Баку, Старый Город",
-    latitude: 40.3661,
-    longitude: 49.8331,
-    price: 95,
-    rate: 4.88,
-    image_url: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=800",
-    max_guests: 2
-  },
+
+
   {
     title: "Loft-апартаменты на Торговой (ул. Низами)",
     description: "Стильный лофт в самом тусовочном центре города. Вся инфраструктура под боком.",
