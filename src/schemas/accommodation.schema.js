@@ -5,6 +5,7 @@ export const getAccommodationsSchema = {
     category: t.Optional(t.String()),
     rate: t.Optional(t.String()),
     location: t.Optional(t.String()),
+    city: t.Optional(t.String()),
     guests: t.Optional(t.String()),
     checkIn: t.Optional(t.String()),
     checkOut: t.Optional(t.String()),

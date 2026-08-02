@@ -3,8 +3,8 @@ import sql from "../config/db.js";
 export const AccommodationService = {
   // 1. Получение списка с фильтрацией (для главной и карты)
   async getAll(filters = {}) {
-    const { category, rate, location, guests, checkIn, checkOut } = filters;
-
+    const { category, rate, location, city, guests, checkIn, checkOut } = filters;
+    console.log("🔍 Принятые фильтры:", { category, rate, location, city });
     const parsedRate = rate && !isNaN(parseFloat(rate)) ? parseFloat(rate) : null;
     const parsedGuests = guests && !isNaN(parseInt(guests)) ? parseInt(guests) : null;
 
@@ -16,6 +16,7 @@ export const AccommodationService = {
           a.description, 
           a.type, 
           a.category, 
+          COALESCE(a.city, 'Баку') AS "city",
           a.location, 
           a.latitude AS "lat", 
           a.longitude AS "lng", 
@@ -29,6 +30,7 @@ export const AccommodationService = {
           ${category ? sql`AND (a.type = ${category} OR a.category = ${category})` : sql``}
           ${parsedRate !== null ? sql`AND a.rate >= ${parsedRate}` : sql``}
           ${location ? sql`AND a.location ILIKE ${'%' + location + '%'}` : sql``}
+         ${city ? sql`AND (a.city ILIKE ${'%' + city + '%'} OR a.location ILIKE ${'%' + city + '%'})` : sql``}
           ${parsedGuests !== null ? sql`AND a.max_guests >= ${parsedGuests}` : sql``}
           ${
             checkIn && checkOut
@@ -63,6 +65,7 @@ export const AccommodationService = {
           a.title, 
           a.type, 
           a.category, 
+          COALESCE(a.city, 'Баку') AS "city",
           a.location, 
           a.latitude AS "lat", 
           a.longitude AS "lng", 
@@ -90,6 +93,7 @@ export const AccommodationService = {
           a.description, 
           a.type, 
           a.category, 
+          COALESCE(a.city, 'Баку') AS "city",
           a.location, 
           a.latitude AS "lat", 
           a.longitude AS "lng", 

@@ -11,6 +11,7 @@ async function migratePush() {
         description TEXT NOT NULL,
         type TEXT NOT NULL,
         category TEXT NOT NULL,
+        city TEXT NOT NULL DEFAULT 'Баку',
         location TEXT NOT NULL,
         latitude DOUBLE PRECISION NOT NULL,
         longitude DOUBLE PRECISION NOT NULL,
@@ -23,6 +24,11 @@ async function migratePush() {
     `;
 
     await sql`
+      ALTER TABLE accommodations 
+      ADD COLUMN IF NOT EXISTS city TEXT NOT NULL DEFAULT 'Баку';
+    `;
+
+    await sql`
       CREATE TABLE IF NOT EXISTS bookings (
         id BIGSERIAL PRIMARY KEY,
         accommodation_id BIGINT NOT NULL REFERENCES accommodations(id) ON DELETE CASCADE,
@@ -32,6 +38,8 @@ async function migratePush() {
         created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
       )
     `;
+
+    
 
     console.log("✅ Database schema is up to date.");
   } catch (error) {

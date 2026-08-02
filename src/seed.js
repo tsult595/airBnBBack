@@ -8,6 +8,7 @@ const accommodations = [
     type: "apartment",
     category: "homes",
     location: "Баку, пр. Нефтяников",
+    city: "Баку",
     latitude: 40.3683,
     longitude: 49.8392,
     price: 180,
@@ -23,6 +24,7 @@ const accommodations = [
     type: "apartment",
     category: "homes",
     location: "Баку, ул. Низами",
+    city: "Баку",
     latitude: 40.3725,
     longitude: 49.8432,
     price: 130,
@@ -36,6 +38,7 @@ const accommodations = [
     type: "apartment",
     category: "homes",
     location: "Баку, пр. Нефтяников",
+    city: "Баку",
     latitude: 40.3698,
     longitude: 49.8426,
     price: 145,
@@ -45,11 +48,12 @@ const accommodations = [
   },
 
   {
-    title: "Уютная квартира в Ичери Шехер",
-    description: "Атмосферная квартира в историческом центре Баку рядом с Девичьей Башней и Старым городом.",
+    title: "Уютная квартира в историческом центре Tbilisi",
+    description: "Атмосферная квартира в историческом центре Tbilisi рядом с Девичьей Башней и Старым городом.",
     type: "apartment",
     category: "homes",
-    location: "Баку, Ичери Шехер",
+    location: "Tbilisi, Ичери Шехер",
+    city: "Tbilisi",
     latitude: 40.3661,
     longitude: 49.8348,
     price: 115,
@@ -64,6 +68,7 @@ const accommodations = [
     type: "apartment",
     category: "homes",
     location: "Баку, White City",
+    city: "Баку",
     latitude: 40.3765,
     longitude: 49.8791,
     price: 220,
@@ -78,6 +83,7 @@ const accommodations = [
     type: "apartment",
     category: "homes",
     location: "Баку, площадь Фонтанов",
+    city: "Баку",
     latitude: 40.3709,
     longitude: 49.8389,
     price: 125,
@@ -92,6 +98,7 @@ const accommodations = [
     type: "apartment",
     category: "homes",
     location: "Баку, ул. Хагани",
+    city: "Баку",
     latitude: 40.3729,
     longitude: 49.8421,
     price: 180,
@@ -106,6 +113,7 @@ const accommodations = [
     type: "apartment",
     category: "homes",
     location: "Баку, ул. Низами",
+    city: "Баку",
     latitude: 40.3718,
     longitude: 49.8427,
     price: 105,
@@ -120,6 +128,7 @@ const accommodations = [
     type: "apartment",
     category: "homes",
     location: "Баку, White City",
+    city: "Баку",
     latitude: 40.3758,
     longitude: 49.8774,
     price: 260,
@@ -134,6 +143,7 @@ const accommodations = [
     type: "apartment",
     category: "homes",
     location: "Баку, ул. Самеда Вургуна",
+    city: "Баку",
     latitude: 40.3772,
     longitude: 49.8475,
     price: 150,
@@ -143,11 +153,12 @@ const accommodations = [
   },
   // --- ОТЕЛИ ---
   {
-    title: "Four Seasons Hotel Baku",
+    title: "Four Seasons Hotel Tbilisi",
     description: "Роскошный 5-звездочный отель на берегу Каспийского моря с премиальным сервисом.",
     type: "hotel",
     category: "services",
-    location: "Баку, пр. Нефтяников 1",
+    location: "Tbilisi, пр. Нефтяников 1",
+    city: "Tbilisi",
     latitude: 40.3625,
     longitude: 49.8339,
     price: 450,
@@ -161,6 +172,7 @@ const accommodations = [
     type: "hotel",
     category: "services",
     location: "Баку, ул. М. Алиева 1",
+    city: "Баку",
     latitude: 40.3597,
     longitude: 49.8254,
     price: 320,
@@ -175,6 +187,7 @@ const accommodations = [
     type: "hotel",
     category: "services",
     location: "Баку, площадь Азадлыг 674",
+    city: "Баку",
     latitude: 40.3714,
     longitude: 49.8480,
     price: 280,
@@ -189,6 +202,7 @@ const accommodations = [
     type: "hotel",
     category: "services",
     location: "Баку, ул. Əkinçi 4",
+    city: "Баку",
     latitude: 40.3662,
     longitude: 49.8357,
     price: 165,
@@ -203,6 +217,7 @@ const accommodations = [
     type: "hotel",
     category: "services",
     location: "Баку, ул. Асафа Зейналлы 29",
+    city: "Баку",
     latitude: 40.3651,
     longitude: 49.8352,
     price: 145,
@@ -217,6 +232,7 @@ const accommodations = [
     type: "hotel",
     category: "services",
     location: "Баку, пр. Ходжалы 1",
+    city: "Баку",
     latitude: 40.3832,
     longitude: 49.8737,
     price: 190,
@@ -231,6 +247,7 @@ const accommodations = [
     type: "hotel",
     category: "services",
     location: "Баку, ул. Сафарали 5",
+    city: "Баку",
     latitude: 40.3693,
     longitude: 49.8371,
     price: 95,
@@ -244,6 +261,7 @@ const accommodations = [
     type: "hotel",
     category: "services",
     location: "Баку, Нардеран",
+    city: "Баку",
     latitude: 40.5892,
     longitude: 49.9864,
     price: 240,
@@ -258,6 +276,7 @@ const accommodations = [
     type: "hotel",
     category: "services",
     location: "Баку, Шихово",
+    city: "Баку",
     latitude: 40.2858,
     longitude: 49.7685,
     price: 130,
@@ -271,6 +290,7 @@ const accommodations = [
     type: "hotel",
     category: "services",
     location: "Баку, пл. Свободы",
+    city: "Баку",
     latitude: 40.3758,
     longitude: 49.8532,
     price: 320,
@@ -284,6 +304,7 @@ const accommodations = [
     type: "hotel",
     category: "services",
     location: "Баку, Ичери Шехер",
+    city: "Баку",
     latitude: 40.3655,
     longitude: 49.8350,
     price: 110,
@@ -305,6 +326,7 @@ async function seed() {
         description TEXT NOT NULL,
         type TEXT NOT NULL,
         category TEXT NOT NULL,
+        city TEXT NOT NULL DEFAULT 'Баку',
         location TEXT NOT NULL,
         latitude DOUBLE PRECISION NOT NULL,
         longitude DOUBLE PRECISION NOT NULL,
@@ -327,6 +349,11 @@ async function seed() {
       )
     `;
 
+    await sql`
+      ALTER TABLE accommodations 
+      ADD COLUMN IF NOT EXISTS city TEXT NOT NULL DEFAULT 'Баку';
+    `;
+
     // 1. Очищаем таблицу перед новым заполнением
     await sql`TRUNCATE TABLE accommodations RESTART IDENTITY CASCADE`;
 
@@ -334,10 +361,10 @@ async function seed() {
     for (const item of accommodations) {
       await sql`
         INSERT INTO accommodations (
-          title, description, type, category, location, 
+          title, description, type, category,  location, city,
           latitude, longitude, price, rate, image_url, max_guests
         ) VALUES (
-          ${item.title}, ${item.description}, ${item.type}, ${item.category}, ${item.location},
+          ${item.title}, ${item.description}, ${item.type}, ${item.category}, ${item.city || 'Баку'}, ${item.location},
           ${item.latitude}, ${item.longitude}, ${item.price}, ${item.rate}, ${item.image_url}, ${item.max_guests}
         )
       `;
