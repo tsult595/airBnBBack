@@ -57,7 +57,7 @@ export const AccommodationService = {
         ${moreThanOneBath === 'true' ? sql`AND a.bathrooms_count > 1` : sql``}
         
         /* ⬇️ Фильтр по удобствам (проверяет, содержит ли массив amenities все выбранные удобства) */
-        ${amenitiesList.length > 0 ? sql`AND a.amenities @> ${amenitiesList}` : sql``}
+        ${amenitiesList.length > 0 ? sql`AND a.amenities @> ${amenitiesList}::text[]` : sql``}
 
         ${
           checkIn && checkOut
