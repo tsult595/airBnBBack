@@ -39,6 +39,7 @@ export const AccommodationService = {
         a.image_url AS "imageUrl", 
         a.max_guests AS "maxGuests",
         COALESCE(a.amenities, '{}') AS "amenities",
+        COALESCE(a.images, '{}') AS "images",
         COALESCE(a.self_check_in, false) AS "selfCheckIn",
         COALESCE(a.bathrooms_count, 1) AS "bathroomsCount",
         a.created_at AS "createdAt"
@@ -49,6 +50,7 @@ export const AccommodationService = {
         ${location ? sql`AND a.location ILIKE ${'%' + location + '%'}` : sql``}
         ${city ? sql`AND (a.city ILIKE ${'%' + city + '%'} OR a.location ILIKE ${'%' + city + '%'})` : sql``}
         ${parsedGuests !== null ? sql`AND a.max_guests >= ${parsedGuests}` : sql``}
+        
         
         /* ⬇️ Фильтр по Самостоятельному прибытию */
         ${selfCheckIn === 'true' ? sql`AND a.self_check_in = TRUE` : sql``}

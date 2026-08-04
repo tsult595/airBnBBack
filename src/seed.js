@@ -14,6 +14,11 @@ const accommodations = [
     price: 180,
     rate: 4.95,
     image_url: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+    images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 4,
     amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
@@ -33,6 +38,11 @@ const accommodations = [
     price: 130,
     rate: 5.00,
     image_url: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+     images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 3,
     amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
@@ -50,6 +60,11 @@ const accommodations = [
     price: 145,
     rate: 4.92,
     image_url: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+     images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 4,
     amenities: ['Wi-Fi', 'Кондиционер',  'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
@@ -68,6 +83,11 @@ const accommodations = [
     price: 115,
     rate: 4.89,
     image_url: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800",
+     images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 3,
     amenities: ['Wi-Fi', 'Кондиционер',  'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
@@ -86,6 +106,11 @@ const accommodations = [
     price: 220,
     rate: 4.97,
     image_url: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800",
+     images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 5,
     amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
@@ -104,6 +129,11 @@ const accommodations = [
     price: 125,
     rate: 4.84,
     image_url: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=800",
+     images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 3,
     amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
@@ -122,6 +152,11 @@ const accommodations = [
     price: 180,
     rate: 4.91,
     image_url: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800",
+     images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 6,
     amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
@@ -140,6 +175,11 @@ const accommodations = [
     price: 105,
     rate: 4.78,
     image_url: "https://images.unsplash.com/photo-1560185008-b033106af5c3?q=80&w=800",
+     images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 2,
     amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Джакузи', 'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
@@ -158,6 +198,11 @@ const accommodations = [
     price: 260,
     rate: 4.95,
     image_url: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=800",
+     images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 4,
     amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
@@ -176,6 +221,11 @@ const accommodations = [
     price: 150,
     rate: 4.86,
     image_url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800",
+     images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 3,
     amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Джакузи', 'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
@@ -194,6 +244,11 @@ const accommodations = [
     price: 450,
     rate: 4.98,
     image_url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800",
+     images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 2,
     amenities: ['Wi-Fi', 'Кондиционер',  'Джакузи', 'Стиральная машина', 'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
@@ -211,6 +266,11 @@ const accommodations = [
     price: 320,
     rate: 4.85,
     image_url: "https://images.unsplash.com/photo-1549294413-26f195200c16?q=80&w=800",
+     images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 3,
     amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
@@ -229,6 +289,11 @@ const accommodations = [
     price: 280,
     rate: 4.91,
     image_url: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=800",
+     images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 3,
     amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Стиральная машина', 'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
@@ -247,6 +312,11 @@ const accommodations = [
     price: 165,
     rate: 4.87,
     image_url: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=800",
+     images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 2,
     amenities: ['Wi-Fi', 'Кондиционер', 'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
@@ -265,6 +335,11 @@ const accommodations = [
     price: 145,
     rate: 4.79,
     image_url: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=800",
+     images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 2,
     amenities: ['Wi-Fi', 'Кондиционер', 'Стиральная машина', 'Телевизор',],
     selfCheckIn: true,
@@ -283,6 +358,11 @@ const accommodations = [
     price: 190,
     rate: 4.72,
     image_url: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=800",
+     images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 4,
     amenities: ['Wi-Fi', 'Кондиционер',  'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
@@ -301,6 +381,11 @@ const accommodations = [
     price: 95,
     rate: 4.63,
     image_url: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=800",
+     images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 2,
     amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
@@ -318,6 +403,11 @@ const accommodations = [
     price: 240,
     rate: 4.88,
     image_url: "https://images.unsplash.com/photo-1602002418082-a4443e081dd1?q=80&w=800",
+     images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 4,
     amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
@@ -336,6 +426,11 @@ const accommodations = [
     price: 130,
     rate: 4.68,
     image_url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800",
+     images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 3,
     amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
@@ -353,6 +448,11 @@ const accommodations = [
     price: 320,
     rate: 4.91,
     image_url: "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=800",
+     images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 2,
     amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
@@ -370,6 +470,11 @@ const accommodations = [
     price: 110,
     rate: 4.75,
     image_url: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800",
+     images : [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800"
+    ],
     max_guests: 2,
     amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
@@ -399,7 +504,8 @@ async function seed() {
           longitude, 
           price, 
           rate, 
-          image_url, 
+          image_url,
+          images, 
           max_guests,
           amenities,
           self_check_in,
@@ -416,6 +522,7 @@ async function seed() {
           ${item.price}, 
           ${item.rate}, 
           ${item.image_url}, 
+          ${item.images || []},
           ${item.max_guests},
           ${item.amenities || []},
           ${item.selfCheckIn || false},

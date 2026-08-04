@@ -18,6 +18,7 @@ async function migratePush() {
         price NUMERIC(10, 2) NOT NULL,
         rate NUMERIC(3, 2) NOT NULL,
         image_url TEXT NOT NULL,
+        images TEXT[] DEFAULT '{}',
         max_guests INTEGER NOT NULL,
         amenities TEXT[] DEFAULT '{}',
         self_check_in BOOLEAN DEFAULT FALSE,
@@ -32,7 +33,8 @@ async function migratePush() {
       ADD COLUMN IF NOT EXISTS city TEXT NOT NULL DEFAULT 'Баку',
       ADD COLUMN IF NOT EXISTS amenities TEXT[] DEFAULT '{}',
       ADD COLUMN IF NOT EXISTS self_check_in BOOLEAN DEFAULT FALSE,
-      ADD COLUMN IF NOT EXISTS bathrooms_count INT DEFAULT 1;
+      ADD COLUMN IF NOT EXISTS bathrooms_count INT DEFAULT 1,
+      ADD COLUMN IF NOT EXISTS images TEXT[] DEFAULT '{}'
     `;
 
     await sql`
