@@ -229,7 +229,7 @@ const accommodations = [
     max_guests: 3,
     amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Джакузи', 'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
-    bathroomsCount: 2
+    bathroomsCount: 2,
   },
   // --- ОТЕЛИ ---
   {
@@ -479,6 +479,7 @@ const accommodations = [
     amenities: ['Wi-Fi', 'Кондиционер', 'Телевизор', 'Бесплатная парковка', 'Кухня'],
     selfCheckIn: true,
     bathroomsCount: 2,
+    
   }
 ];
 
@@ -525,8 +526,8 @@ async function seed() {
           ${item.images || []},
           ${item.max_guests},
           ${item.amenities || []},
-          ${item.selfCheckIn || false},
-          ${item.bathroomsCount || 1}
+          ${item.selfCheckIn ?? false},
+          ${item.bathroomsCount ?? 1}
         )
       `;
     }

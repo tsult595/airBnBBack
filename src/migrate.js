@@ -35,6 +35,7 @@ async function migratePush() {
       ADD COLUMN IF NOT EXISTS self_check_in BOOLEAN DEFAULT FALSE,
       ADD COLUMN IF NOT EXISTS bathrooms_count INT DEFAULT 1,
       ADD COLUMN IF NOT EXISTS images TEXT[] DEFAULT '{}'
+     
     `;
 
     await sql`

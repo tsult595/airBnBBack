@@ -12,6 +12,10 @@ export const getAccommodationsSchema = {
     selfCheckIn: t.Optional(t.String()),     
     moreThanOneBath: t.Optional(t.String()),
     amenities: t.Optional(t.String()),
+    
+    // 🟢 ДОБАВЛЕНО: поддержка пагинации в схеме
+    page: t.Optional(t.String()),
+    limit: t.Optional(t.String()),
   }),
 };
 
