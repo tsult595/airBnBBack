@@ -105,31 +105,36 @@ export const AccommodationService = {
 },
   // 3. Получение одного объекта по ID
   async getById(id) {
-    try {
-      const rows = await sql`
-        SELECT 
-          a.id::text AS "id", 
-          a.title, 
-          a.description, 
-          a.type, 
-          a.category, 
-          COALESCE(a.city, 'Баку') AS "city",
-          a.location, 
-          a.latitude AS "lat", 
-          a.longitude AS "lng", 
-          a.price::float AS "price", 
-          a.rate::float AS "rate", 
-          a.image_url AS "imageUrl", 
-          a.max_guests AS "maxGuests"
-        FROM accommodations a
-        WHERE a.id = ${id}::bigint
-        LIMIT 1
-      `;
-      
-      return rows.length > 0 ? rows[0] : null;
-    } catch (error) {
-      console.error("❌ Ошибка SQL в getById:", error);
-      return null;
-    }
+  try {
+    const rows = await sql`
+      SELECT 
+        a.id::text AS "id", 
+        a.title, 
+        a.description, 
+        a.type, 
+        a.category, 
+        COALESCE(a.city, 'Баку') AS "city",
+        a.location, 
+        a.latitude AS "lat", 
+        a.longitude AS "lng", 
+        a.price::float AS "price", 
+        a.rate::float AS "rate", 
+        a.image_url AS "imageUrl", 
+        COALESCE(a.images, '{}') AS "images",               -- 🟢 Добавили массив дополнительных фото
+        a.max_guests AS "maxGuests",
+        COALESCE(a.amenities, '{}') AS "amenities",         -- 🟢 Добавили удобства
+        COALESCE(a.self_check_in, false) AS "selfCheckIn",  -- 🟢 Добавили самозаезд
+        COALESCE(a.bathrooms_count, 1) AS "bathroomsCount" -- 🟢 Добавили кол-во ванных
+      FROM accommodations a
+      WHERE a.id = ${id}::bigint
+      LIMIT 1
+    `;
+    
+    return rows.length > 0 ? rows[0] : null;
+  } catch (error) {
+    console.error("❌ Ошибка SQL в getById:", error);
+    return null;
   }
-};
+}
+
+}

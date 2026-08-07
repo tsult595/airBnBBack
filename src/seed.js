@@ -483,15 +483,22 @@ const accommodations = [
   }
 ];
 
+const adminUser = {
+  email: "admin@example.com",
+  password: "admin123",
+  avatar: "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80&w=800",
+  role: "admin",
+};
+
 async function seed() {
   console.log("🌱 Начинаем очистку и заполнение базы данных...");
   let exitCode = 0;
 
   try {
-    // 1. Очищаем таблицу перед новым заполнением
-    await sql`TRUNCATE TABLE accommodations RESTART IDENTITY CASCADE`;
+    // 1. Очищаем таблицы перед новым заполнением
+    await sql`TRUNCATE TABLE accommodations, users RESTART IDENTITY CASCADE`;
 
-    // 2. Вставляем массив данных в базу
+    // 2. Вставляем жилье (accommodations)
     for (const item of accommodations) {
       await sql`
         INSERT INTO accommodations (
@@ -532,7 +539,20 @@ async function seed() {
       `;
     }
 
-    console.log("✅ База данных успешно заполнена тестовыми данными!");
+    // 3. Хешируем пароль и вставляем админа (users)
+    const hashedPassword = await Bun.password.hash(adminUser.password);
+
+    await sql`
+      INSERT INTO users (email, password, avatar, role)
+      VALUES (
+        ${adminUser.email}, 
+        ${hashedPassword}, 
+        ${adminUser.avatar}, 
+        ${adminUser.role}
+      )
+    `;
+
+    console.log("✅ База данных успешно заполнена жильем и админом!");
   } catch (error) {
     exitCode = 1;
     console.error("❌ Ошибка при заполнении базы:", error);
@@ -543,3 +563,4 @@ async function seed() {
 }
 
 seed();
+

@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import { Elysia } from "elysia";
 import { cors } from "@elysiajs/cors";
 import { accommodationRoutes } from "./routes/accommodation.routes.js";
+import { userRoutes } from "./routes/user.routes.js";
 
 dotenv.config();
 
@@ -36,6 +37,7 @@ const app = new Elysia()
     return { error: error.message || "Internal Server Error" };
   })
   .use(accommodationRoutes)
+  .use(userRoutes)
   .listen(5000);
 
 console.log(`🚀 Elysia Server running on http://${app.server?.hostname}:${app.server?.port}`);

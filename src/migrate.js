@@ -4,6 +4,7 @@ async function migratePush() {
   console.log("🛠️ Applying database schema...");
 
   try {
+    // 1. Accommodations
     await sql`
       CREATE TABLE IF NOT EXISTS accommodations (
         id BIGSERIAL PRIMARY KEY,
@@ -27,21 +28,31 @@ async function migratePush() {
       )
     `;
 
-    // Безопасное добавление полей, если таблица уже существовала раньше
+    // 2. Users (🟢 Добавили role и created_at)
     await sql`
-      ALTER TABLE accommodations 
-      ADD COLUMN IF NOT EXISTS city TEXT NOT NULL DEFAULT 'Баку',
-      ADD COLUMN IF NOT EXISTS amenities TEXT[] DEFAULT '{}',
-      ADD COLUMN IF NOT EXISTS self_check_in BOOLEAN DEFAULT FALSE,
-      ADD COLUMN IF NOT EXISTS bathrooms_count INT DEFAULT 1,
-      ADD COLUMN IF NOT EXISTS images TEXT[] DEFAULT '{}'
-     
+      CREATE TABLE IF NOT EXISTS users (
+        id BIGSERIAL PRIMARY KEY,
+        email TEXT NOT NULL UNIQUE,
+        password TEXT NOT NULL,
+        avatar TEXT,
+        role TEXT NOT NULL DEFAULT 'user',
+        created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+      )
     `;
 
+    // Безопасное добавление колонок на случай, если таблица users уже создана
+    await sql`
+      ALTER TABLE users 
+      ADD COLUMN IF NOT EXISTS role TEXT NOT NULL DEFAULT 'user',
+      ADD COLUMN IF NOT EXISTS created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    `;
+
+    // 3. Bookings
     await sql`
       CREATE TABLE IF NOT EXISTS bookings (
         id BIGSERIAL PRIMARY KEY,
         accommodation_id BIGINT NOT NULL REFERENCES accommodations(id) ON DELETE CASCADE,
+        user_id BIGINT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
         status TEXT NOT NULL DEFAULT 'pending',
         check_in DATE NOT NULL,
         check_out DATE NOT NULL,

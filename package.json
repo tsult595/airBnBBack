@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@elysiajs/cors": "^1.4.2",
+    "@elysiajs/jwt": "^1.4.2",
     "dotenv": "^17.4.2",
     "elysia": "latest",
     "postgres": "^3.4.9"
