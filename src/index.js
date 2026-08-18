@@ -3,6 +3,7 @@ import { Elysia } from "elysia";
 import { cors } from "@elysiajs/cors";
 import { accommodationRoutes } from "./routes/accommodation.routes.js";
 import { userRoutes } from "./routes/user.routes.js";
+import { favoritesRoutes } from "./routes/favorites.routes.js";
 
 dotenv.config();
 
@@ -38,6 +39,7 @@ const app = new Elysia()
   })
   .use(accommodationRoutes)
   .use(userRoutes)
+  .use(favoritesRoutes)
   .listen(5000);
 
 console.log(`🚀 Elysia Server running on http://${app.server?.hostname}:${app.server?.port}`);

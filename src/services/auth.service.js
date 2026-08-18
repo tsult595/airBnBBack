@@ -63,5 +63,7 @@ export const AuthService = {
       console.error("❌ Error getting user:", error);
       return null;
     }
-  }
+  },
+
+
 };

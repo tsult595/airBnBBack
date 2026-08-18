@@ -47,6 +47,18 @@ async function migratePush() {
       ADD COLUMN IF NOT EXISTS created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
     `;
 
+
+  await sql `
+  CREATE TABLE IF NOT EXISTS favorites (
+  id SERIAL PRIMARY KEY,
+  user_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  accommodation_id INT NOT NULL REFERENCES accommodations(id) ON DELETE CASCADE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE(user_id, accommodation_id) -- Предотвращает дублирование лайков
+);
+  `
+
+
     // 3. Bookings
     await sql`
       CREATE TABLE IF NOT EXISTS bookings (
